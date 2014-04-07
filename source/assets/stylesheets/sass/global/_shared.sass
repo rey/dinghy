@@ -1,0 +1,32 @@
+body
+  color: $black
+  font-family: $font-droid-sans
+  padding: $gutter
+  div.project
+    margin: 0 auto
+    max-width: $max-width
+    // links
+    a
+      color: $pink
+    // all body text
+    p, li
+      font-size: 18px
+      line-height: 28px
+      margin-bottom: $gutter
+    // lists
+    ul, ol
+      +bp(less-than-max-width)
+        list-style-position: inside
+      li:last-child
+        margin-bottom: 0
+    ul
+      list-style-type: disc
+    ol
+      list-style-type: decimal
+    // main
+    main
+      margin-bottom: $gutter*2
+      h2
+        font-size: 20px
+        line-height: 31px
+        margin-bottom: $gutter

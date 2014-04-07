@@ -1,0 +1,11 @@
+@mixin bp($point)
+  @if $point == less-than-max-width
+    @media (max-width: $max-width)
+      @content
+
+=die
+  display: none !important
+=o
+  outline: 1px solid pink !important
+=red
+  background-color: pink !important
