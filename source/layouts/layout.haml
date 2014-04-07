@@ -10,13 +10,16 @@ layout: default
     %link{:href => "//fonts.googleapis.com/css?family=PT+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
     -# %link{:href => "assets/stylesheets/css/style.css" :rel=>"stylesheet" :type=>"text/css"}
     = stylesheet_link_tag "style"
+    %title
+      = current_page.data.title
   %body
     %div.container
-      %header
-        %h1 Project
+      
+      -# include header
+      = partial "partials/header"
+
       %main
-        %p
-          This is a test
-      %footer
-        %p
-          This is a test
+        = yield
+
+      -# include footer
+      = partial "partials/footer"
